@@ -1,0 +1,17 @@
+{
+  "name": "fluent-ui-react-repo",
+  "version": "1.0.0",
+  "description":  "Reusable React components for building experiences for Microsoft 365.",
+  "private": true,
+  "devDependencies": {
+  },
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "@fluentui/b/**"
+    ]
+  }
+}
