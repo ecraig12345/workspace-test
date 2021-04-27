@@ -1,9 +1,9 @@
 {
-  "name": "@fluentui/a",
+  "name": "@fluentui/pkg1",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
   "devDependencies": {
-    "typescript": "4.2.4"
+    "typescript": "4.1.5"
   }
 }

@@ -1,17 +1,20 @@
 {
-  "name": "fluent-ui-react-repo",
-  "version": "1.0.0",
-  "description":  "Reusable React components for building experiences for Microsoft 365.",
+  "license": "MIT",
   "private": true,
+  "scripts": {
+    "preinstall": "rm -rf node_modules packages/*/node_modules yarn.lock",
+    "postinstall": "echo && ls {node_modules,packages/*/node_modules} && echo",
+    "whyy": "whyy () { yarn why \"$*\" | sed -E '/Disk size/d;/shared dependencies/d;/\\/4]/d;s/^info /   /g;s/Hoisted from //g;s/\"//g;s/This module exists because /- /g;s/ depends on it\\.?//g;/Done in/d;/Reasons this/d' | perl -p -e 's/=> Found /\\n/' && echo; }; whyy"
+  },
   "devDependencies": {
   },
-  "license": "MIT",
   "workspaces": {
     "packages": [
       "packages/*"
     ],
     "nohoist": [
-      "@fluentui/b/**"
+      "@fluentui/weird-pkg/@microsoft/api-extractor",
+      "@fluentui/weird-pkg/typescript"
     ]
   }
 }
